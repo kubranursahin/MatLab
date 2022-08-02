@@ -1,0 +1,7 @@
+function obj = mesafeHesapla(uzaklik,cozum)
+    for i=1:sehirSayisi-1
+        uzaklik = ([i i+1]);
+    end
+end
+
+

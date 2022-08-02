@@ -1,0 +1,19 @@
+function [cozum,obj,degisim_miktari,komsu,obj_komsu] = simann2(as,us,d,delta)
+
+cozum = unifrnd(as,us,[1,d]);
+obj = sum(cozum.^2);
+degisim_miktari = unifrnd(-(us-as)*delta/2,(us-as)*delta/2, [1,d]);
+komsu = cozum+degisim_miktari;
+obj_komsu = sum(komsu.^2);
+
+if obj_komsu<=obj
+    cozum=komsu;
+    obj=objkomsu;
+else
+    de=obj_komsu-obj;
+    pa=edxp(-de/T);
+    rs=unifrnd(0,1);
+    if rs<pa
+        cozum=komsu;
+        obj=obj_komsu;
+end
